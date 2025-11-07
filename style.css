@@ -350,7 +350,7 @@
             flex-shrink: 0;            
         }
 
-        .feature-content h4 { color: var(--primary); margin-bottom: 5px; }
+        .feature-content h3 { color: var(--primary); margin-bottom: 5px; }
         
         .code-example {
             background: #282c34;
@@ -598,4 +598,5 @@
         @media (max-width: 768px) {
             .hero h1 { font-size: 2rem; }
             .nav-links { width: 100%; justify-content: center; }
+
         }
