@@ -42,7 +42,7 @@
                 <li><a href="#cleancode">Código</a></li>
                 <li><a href="#evaluacion">Evaluación</a></li>
                 <li><a href="#video">Video</a></li>
-                <li><a href="#referencias">Referencias</a></li>
+                <li><a href="#referencias">Conclusiones y Referencias</a></li>
                 <li><button class="theme-toggle" id="themeToggle">
                     <span id="themeIcon">🌙</span>
                     <span id="themeText">Oscuro</span>
@@ -289,7 +289,7 @@
             </section>
     
             <section class="section" id="evaluacion">
-                <h2 class="section-title">Evaluación de Calidad - Ejemplo</h2>
+                <h2 class="section-title">Evaluación de Calidad</h2>
                 <div class="evaluation-container">
                     <h3 style="text-align:center;color:var(--primary);margin-bottom:30px;">Sitio Web Evaluado: https://portal.senasofiaplus.edu.co/</h3>
                     <div class="quality-bars">
@@ -389,6 +389,16 @@
                         <div class="final-score-number">3.67</div>
                         <p>de 5.0</p>
                     </div>
+                    <div class="recommendations-toggle">
+                        <button class="recommendations-btn" id="toggleRecommendations">
+                            <span class="rec-icon">💡</span>
+                            <span>Ver Recomendaciones</span>
+                        </button>
+                        <div class="recommendations-content" id="recommendationsContent">
+                            <p>Se recomienda unificar los estilos visuales entre las distintas secciones para ofrecer una experiencia más coherente y profesional, además de revisar el comportamiento responsive desde dispositivos móviles reales. En cuanto al rendimiento, podría optimizarse la carga en móviles mediante compresión de imágenes o uso eficiente de recursos.
+                                También se sugiere corregir los errores de marcado HTML detectados por el validador W3C y reforzar la seguridad asegurando que todos los enlaces mantengan certificado de conexión segura (HTTPS).</p>
+                        </div>
+                    </div>
                 </div>
             </section>
     
@@ -396,6 +406,24 @@
                 <h2 style="color:white;margin-bottom:20px;">🎬 Video Explicativo</h2>
                 <p style="color:white;margin-bottom:30px;">Aprende más sobre la calidad del software con nuestro video educativo</p>
                 <button class="btn-video" id="btnVideo">▶ Ver Video</button>
+                 <div id="videoModal" class="modal">
+                    <div class="modal-content">
+                        <button class="modal-close" id="closeModal">&times;</button>
+                        <div class="video-container">
+                            <iframe id="videoFrame" src="about:blank" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                  </div>
+            </section>
+            
+            <section class="section" id="conclusion">
+                <div class="conclusion-container">
+                    <div class="conclusion-icon">✨</div>
+                    <h2 class="section-title-v2">Conclusión</h2>
+                    <p class="conclusion-text">
+                        Hacer software de calidad no es sencillo, pero es posible cuando se trabaja con compromiso y responsabilidad. Las herramientas y estándares ya existen, solo hace falta la voluntad de aplicarlos correctamente.
+                    </p>
+                </div>
             </section>
     
             <section class="section" id="referencias">
@@ -410,15 +438,6 @@
                         <strong>ISO/IEC 12207</strong> (2017). Software life cycle processes.
                     </div>
             </section>
-    
-        <div id="videoModal" class="modal">
-            <div class="modal-content">
-                <button class="modal-close" id="closeModal">&times;</button>
-                <div class="video-container">
-                    <iframe id="videoFrame" src="about:blank" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
         </div>
     </main>   
     <script src="script.js"></script>
