@@ -585,6 +585,18 @@
             cursor: pointer;
         }
 
+        .btn-video:hover {
+            background: var(--white);
+            color: var(--primary);
+            transform: scale(1.05);  
+        }
+
+        .section-video {
+            color: var(--white);
+            padding: 5px;
+            margin-bottom: 15px;
+        }
+
         .section-title-v2 {
             font-size: 2.5rem;
             margin-bottom: 25px;
@@ -715,6 +727,7 @@
             .nav-links { width: 100%; justify-content: center; }
 
         }
+
 
 
 
