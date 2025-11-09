@@ -503,21 +503,59 @@
         }
         
         .final-score-number { font-size: 4rem; font-weight: 800; margin: 20px 0; }
-        
-        .references-list {
+
+        .recommendations-toggle {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .recommendations-btn {
+            background: (--white);
+            color: var(--dark);
+            border: 2px solid var(--primary);
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+
+        .recommendations-btn:hover {
             background: var(--white);
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: var(--shadow);
+            color: var(--primary);
+            transform: scale(1.05);
         }
-        
-        .reference-item {
-            padding: 15px 0;
-            border-bottom: 1px solid #e2e8f0;
+
+        .rec-icon {
+            font-size: 1.2rem;
         }
-        
-        .reference-item:last-child { border-bottom: none; }
-        .reference-item strong { color: var(--primary); }
+
+        .recommendations-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.5s ease;
+            margin-top: 0;
+        }
+
+        .recommendations-content.active {
+            max-height: 500px;
+            margin-top: 20px;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .recommendations-content p {
+            color: var(--white);
+            line-height: 1.8;
+            text-align: left;
+            margin: 0;
+        }
         
         .video-section {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
@@ -586,6 +624,65 @@
             border: none;
         }
 
+        .conclusion-container {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            padding: 60px 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .conclusion-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .conclusion-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .conclusion-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            position: relative;
+            z-index: 1;
+            font-weight: 400;
+        }
+
+        .references-list {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+        
+        .reference-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .reference-item:last-child { border-bottom: none; }
+        .reference-item strong { color: var(--primary); }
+
         /* Modo oscuro: mejora la accesibilidad visual según preferencia del usuario */
         body.dark-mode { background: #0f172a; color: #e2e8f0; }
         body.dark-mode .navbar { background: #1e293b; }
@@ -601,6 +698,7 @@
             .nav-links { width: 100%; justify-content: center; }
 
         }
+
 
 
 
