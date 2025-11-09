@@ -254,6 +254,15 @@
             color: var(--gray);
             line-height: 1.8; 
         }
+
+        .card-title-v2  {
+            font-size: 1.5rem; 
+            color:var(--primary); 
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+        }
         
         .accordion {
             background: var(--white);
@@ -698,6 +707,7 @@
             .nav-links { width: 100%; justify-content: center; }
 
         }
+
 
 
 
