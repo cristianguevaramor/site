@@ -584,6 +584,14 @@
             font-weight: 700;
             cursor: pointer;
         }
+
+        .section-title-v2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+            color: var(--white);
+        }
         
         .modal {
             display: none;
@@ -707,6 +715,7 @@
             .nav-links { width: 100%; justify-content: center; }
 
         }
+
 
 
 
