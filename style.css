@@ -509,6 +509,7 @@
             border-radius: 16px;
             text-align: center;
             margin-top: 30px;
+            font-size: 20px;  
         }
         
         .final-score-number { font-size: 4rem; font-weight: 800; margin: 20px 0; }
@@ -727,6 +728,7 @@
             .nav-links { width: 100%; justify-content: center; }
 
         }
+
 
 
 
