@@ -9,6 +9,7 @@
                 this.setupThemeToggle();
                 this.setupVideoModal();
                 this.animateQualityBars();
+                this.setupRecommendations();
             },
 
             // Acordeones para mostrar/ocultar contenido teórico sin saturar la vista.
@@ -95,10 +96,28 @@
 
                 const evalSection = document.querySelector('.evaluation-container');
                 if (evalSection) observer.observe(evalSection);
+            },
+              setupRecommendations() {
+                const btn = document.getElementById('toggleRecommendations');
+                const content = document.getElementById('recommendationsContent');
+                
+                if (btn && content) {
+                    btn.addEventListener('click', () => {
+                        content.classList.toggle('active');
+                        
+                        // Cambia el texto del botón
+                        if (content.classList.contains('active')) {
+                            btn.innerHTML = '<span class="rec-icon">💡</span><span>Ocultar Recomendaciones</span>';
+                        } else {
+                            btn.innerHTML = '<span class="rec-icon">💡</span><span>Ver Recomendaciones</span>';
+                        }
+                    });
+                }
             }
         };
 
 
         document.addEventListener('DOMContentLoaded', () => app.init());
+
 
 
