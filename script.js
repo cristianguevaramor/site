@@ -57,7 +57,7 @@
 
                 btn.addEventListener('click', () => {
                     modal.style.display = 'block';
-                    frame.src = 'https://www.youtube.com/embed/sAwr1dAJ-sk';
+                    frame.src = 'https://www.youtube.com/embed/xopvkx6CpNs';
                 });
 
                 const closeModal = () => {
@@ -100,3 +100,4 @@
 
 
         document.addEventListener('DOMContentLoaded', () => app.init());
+
